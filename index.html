@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chinesebychin Practice App</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <img class="brand-logo" src="./assets/logo.png" alt="Chinesebychin logo" />
+          <div>
+            <h1>Chinesebychin</h1>
+            <p>แอปฝึกไวยากรณ์จีน</p>
+          </div>
+        </div>
+
+        <label class="search-box">
+          <span>ค้นหาบทฝึก</span>
+          <input id="searchInput" type="search" placeholder="เช่น 把, 了, เปรียบเทียบ..." />
+        </label>
+
+        <label class="mobile-unit-select">
+          <span>เลือกไวยากรณ์</span>
+          <select id="unitSelect" aria-label="เลือกบทไวยากรณ์"></select>
+        </label>
+
+        <div class="progress-panel">
+          <div>
+            <strong id="doneCount">0</strong>
+            <span>/ 40 บทเรียนสำเร็จ</span>
+          </div>
+          <div class="progress-bar" aria-hidden="true">
+            <span id="progressFill"></span>
+          </div>
+        </div>
+
+        <nav id="unitList" class="unit-list" aria-label="รายการบทฝึก"></nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div class="tabs" role="tablist" aria-label="โหมดฝึก">
+            <button class="tab" data-view="vocab" type="button">คำศัพท์</button>
+            <button class="tab is-active" data-view="practice" type="button">แบบฝึกหัด</button>
+          </div>
+          <div class="toolbar">
+            <button id="prevBtn" class="icon-btn" type="button" title="บทก่อนหน้า">‹</button>
+            <button id="nextBtn" class="icon-btn" type="button" title="บทถัดไป">›</button>
+          </div>
+        </header>
+
+        <section id="practiceView" class="view is-active" aria-label="แบบฝึกหัด">
+          <div class="practice-hero">
+            <div>
+              <p id="unitNumber" class="eyebrow"></p>
+              <h2 id="practiceTitle"></h2>
+              <p id="unitChineseTitle" class="chinese-title"></p>
+              <p id="practiceSubtitle" class="lesson-lead"></p>
+              <div id="wordChips" class="chips"></div>
+            </div>
+            <img class="banner-image" src="./assets/practice-banner.png" alt="Chinese practice illustration" />
+          </div>
+
+          <div id="practiceList" class="practice-list"></div>
+          <div class="practice-actions">
+            <button id="checkBtn" class="primary-btn" type="button">ตรวจคำตอบ</button>
+            <button id="showAnswersBtn" class="secondary-btn" type="button">เฉลย</button>
+            <button id="resetBtn" class="secondary-btn" type="button">ล้างคำตอบบทนี้</button>
+            <button id="markDoneBtn" class="secondary-btn" type="button">บันทึกว่าเรียนแล้ว</button>
+          </div>
+        </section>
+
+        <section id="vocabView" class="view" aria-label="คำศัพท์">
+          <div class="vocab-head">
+            <div>
+              <p class="eyebrow">คำศัพท์ใหม่ประจำบท</p>
+              <h2 id="vocabTitle"></h2>
+              <p id="vocabSubtitle" class="lesson-lead"></p>
+            </div>
+            <img class="practice-character" src="./assets/characters.png" alt="Chinesebychin characters" />
+          </div>
+          <div id="vocabList" class="vocab-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
