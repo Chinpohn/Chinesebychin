@@ -100,6 +100,27 @@ a {
   gap: 18px;
 }
 
+.vocab-entry-section {
+  padding-top: 34px;
+}
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--leaf-dark);
+  font-size: clamp(32px, 5vw, 58px);
+  line-height: 1;
+}
+
+.hsk-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .unit-entry-card {
   position: relative;
   display: block;
@@ -113,6 +134,11 @@ a {
   isolation: isolate;
 }
 
+.hsk-home-card {
+  min-height: 260px;
+  aspect-ratio: 2.4 / 1;
+}
+
 .unit-entry-card img {
   width: 100%;
   height: 100%;
@@ -120,6 +146,10 @@ a {
   display: block;
   object-fit: cover;
   transition: transform 220ms ease;
+}
+
+.hsk-home-card img {
+  min-height: 260px;
 }
 
 .unit-entry-card:hover img {
@@ -197,6 +227,15 @@ a {
   .unit-entry-card,
   .unit-entry-card img {
     min-height: 340px;
+  }
+
+  .hsk-entry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hsk-home-card,
+  .hsk-home-card img {
+    min-height: 240px;
   }
 
   .unit-entry-card img {

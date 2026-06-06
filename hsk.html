@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chinesebychin HSK Vocabulary</title>
+    <link rel="icon" href="./assets/logo.png" />
+    <link rel="stylesheet" href="./styles.css?v=hsk-checkin-ui-20260606" />
+  </head>
+  <body>
+    <div class="hsk-shell">
+      <header class="hsk-topbar">
+        <a class="brand hsk-brand" href="./index.html?v=hsk-separated-20260606">
+          <img class="brand-logo" src="./assets/logo.png" alt="Chinesebychin logo" />
+          <div>
+            <h1>Chinesebychin</h1>
+            <p>ท่องคำศัพท์ HSK</p>
+          </div>
+        </a>
+        <nav class="hsk-level-switch" aria-label="เลือก HSK">
+          <a data-hsk-link="1" href="./hsk.html?hsk=1&amp;v=hsk-separated-20260606">HSK 1</a>
+          <a data-hsk-link="2" href="./hsk.html?hsk=2&amp;v=hsk-separated-20260606">HSK 2</a>
+        </nav>
+      </header>
+
+      <main class="hsk-workspace">
+        <div class="hsk-content-layout">
+          <section id="wordbankView" class="hsk-main-column" aria-label="ท่องคำศัพท์">
+            <div class="hsk-hero">
+              <img id="hskHeroImage" src="./assets/hsk1-cover.png" alt="ท่องคำศัพท์ HSK" />
+            </div>
+            <div class="vocab-head">
+              <div>
+                <p class="eyebrow">HSK Vocabulary</p>
+                <h2 id="hskPageTitle">ท่องคำศัพท์</h2>
+                <p id="wordbankSubtitle" class="lesson-lead"></p>
+              </div>
+              <img class="practice-character" src="./assets/characters.png" alt="Chinesebychin characters" />
+            </div>
+            <div class="daily-word-panel">
+              <div>
+                <p class="eyebrow">คำศัพท์ประจำวัน</p>
+                <h3>ท่องคำศัพท์วันนี้</h3>
+                <p id="dailyWordStatus" class="lesson-lead"></p>
+              </div>
+              <div id="dailyQuiz" class="daily-quiz"></div>
+            </div>
+            <div class="wordbank-tools">
+              <label class="word-search">
+                <span>ค้นหาคำศัพท์</span>
+                <input id="wordSearchInput" type="search" placeholder="เช่น ความหมาย, พินอิน..." />
+              </label>
+            </div>
+            <div id="wordDetail" class="word-detail is-empty"></div>
+            <div id="wordbankList" class="wordbank-list"></div>
+          </section>
+
+          <aside class="hsk-checkin-sidebar" aria-label="เช็กอินประจำวัน">
+            <div class="checkin-panel">
+              <div>
+                <p class="eyebrow">การเรียนประจำวัน</p>
+                <h2>เช็กอินประจำวัน</h2>
+                <p id="checkinSubtitle" class="lesson-lead"></p>
+              </div>
+              <div class="checkin-card">
+                <span id="checkinToday" class="checkin-date"></span>
+                <strong id="checkinStreak">0 วัน</strong>
+                <span>เรียนต่อเนื่อง</span>
+              </div>
+            </div>
+            <div class="checkin-month-nav" aria-label="เลือกเดือนในปี 2026">
+              <button id="prevCheckinMonthBtn" class="secondary-btn" type="button">เดือนก่อน</button>
+              <strong id="checkinMonthTitle">2026</strong>
+              <button id="nextCheckinMonthBtn" class="secondary-btn" type="button">เดือนถัดไป</button>
+            </div>
+            <div id="checkinGrid" class="checkin-grid" aria-label="ปฏิทินเช็กอินปี 2026"></div>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script src="./data.js?v=hsk-checkin-ui-20260606"></script>
+    <script src="./hsk.js?v=hsk-checkin-ui-20260606"></script>
+  </body>
+</html>
